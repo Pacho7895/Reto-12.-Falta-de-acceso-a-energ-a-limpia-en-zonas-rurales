@@ -1,0 +1,71 @@
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Sun, BatteryCharging, Lightbulb, Radio, Info } from "lucide-react";
+
+export default function SolarKitPage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-b from-green-100 to-white p-6">
+      <h1 className="text-3xl font-bold text-center text-green-900 mb-8">
+        Kit Solar Comunitario para el Chocó
+      </h1>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <Card className="shadow-xl rounded-2xl">
+          <CardContent className="flex flex-col items-center p-6">
+            <Sun className="text-yellow-500 w-12 h-12 mb-2" />
+            <h2 className="text-xl font-semibold mb-2">Panel Solar Portátil</h2>
+            <p className="text-center text-gray-700">
+              Captura energía solar incluso en días parcialmente nublados. Ideal para el clima húmedo del Chocó.
+            </p>
+          </CardContent>
+        </Card>
+
+        <Card className="shadow-xl rounded-2xl">
+          <CardContent className="flex flex-col items-center p-6">
+            <BatteryCharging className="text-green-600 w-12 h-12 mb-2" />
+            <h2 className="text-xl font-semibold mb-2">Batería Recargable</h2>
+            <p className="text-center text-gray-700">
+              Batería de larga duración que permite almacenar energía para usar durante la noche o en días lluviosos.
+            </p>
+          </CardContent>
+        </Card>
+
+        <Card className="shadow-xl rounded-2xl">
+          <CardContent className="flex flex-col items-center p-6">
+            <Lightbulb className="text-yellow-400 w-12 h-12 mb-2" />
+            <h2 className="text-xl font-semibold mb-2">Lámparas LED</h2>
+            <p className="text-center text-gray-700">
+              Iluminación segura y eficiente para el estudio nocturno, cocinar y desplazarse.
+            </p>
+          </CardContent>
+        </Card>
+
+        <Card className="shadow-xl rounded-2xl">
+          <CardContent className="flex flex-col items-center p-6">
+            <Radio className="text-purple-600 w-12 h-12 mb-2" />
+            <h2 className="text-xl font-semibold mb-2">Cargador USB y Radio</h2>
+            <p className="text-center text-gray-700">
+              Permite cargar celulares y escuchar noticias o programas educativos en la comunidad.
+            </p>
+          </CardContent>
+        </Card>
+
+        <Card className="shadow-xl rounded-2xl">
+          <CardContent className="flex flex-col items-center p-6">
+            <Info className="text-blue-600 w-12 h-12 mb-2" />
+            <h2 className="text-xl font-semibold mb-2">Capacitación Local</h2>
+            <p className="text-center text-gray-700">
+              Manual visual en lengua local y formación básica para mantenimiento del kit por jóvenes de la comunidad.
+            </p>
+          </CardContent>
+        </Card>
+      </div>
+
+      <div className="flex justify-center mt-10">
+        <Button className="bg-green-700 text-white hover:bg-green-800 px-6 py-2 text-lg rounded-xl">
+          Ver Simulación del Kit
+        </Button>
+      </div>
+    </div>
+  );
+}
